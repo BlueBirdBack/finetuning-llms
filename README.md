@@ -36,8 +36,30 @@ With finetuning, you can update the weights of an LLM neural network on new data
 To run the demo notebooks:
 
 1. Clone the repository
-1. Install dependencies with `pip install -r requirements.txt`
-1. Start Jupyter notebook and open the notebooks
+2. Install dependencies with `pip install -r requirements.txt`
+3. Create a `.env` file in the root directory of the project and add your Lamini API key like so:
+
+    ```
+    # .env
+    LAMINI_API_KEY=your_api_key_here
+    ```
+
+4. Start Jupyter notebook and open the notebooks. In the notebook, use the following code to setup the API key:
+
+    ```python
+    from llama import setup_config
+    import os
+    from dotenv import load_dotenv, find_dotenv
+
+    load_dotenv(find_dotenv())
+    setup_config({"production.key": os.getenv('LAMINI_API_KEY')})
+    ```
+
+### Note
+
+I found the official documentation for using the API key a bit difficult to understand. The instructions provided here are based on my best understanding and experimentation. If you have any suggestions or improvements, please feel free to contribute!
+
+![screenshot](./assets/230824_api_key.png)
 
 ## Course Resources
 
