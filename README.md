@@ -4,6 +4,18 @@ This repository contains code and examples from the [Finetuning Large Language M
 
 ## Course Overview
 
+Chapters:
+
+0. Introduction
+1. Why finetune
+2. Where finetuning fits in
+3. Instruction finetuning
+4. Data preparation
+5. Training process
+6. Evaluation and iteration
+7. Consideration on getting started now
+8. Conclusion
+
 In this course you will learn:
 
 - When to apply finetuning on large language models (LLMs)
